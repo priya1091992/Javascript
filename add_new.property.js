@@ -11,4 +11,5 @@ var obj={
 
 obj.age=24;
 obj.print=function(){return console.log(this.name, this.lastName, "age:",this.age);}
+
 obj.print();
