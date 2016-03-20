@@ -20,8 +20,11 @@ function Fruit(fruitName, fruitColor){
   this.name = fruitName;
   this.color = fruitColor;
 
-  this.amIOrganic = function (){      //if this function is not declared in Fruit then the Plant amIOrganic function will be called
+  this.amIOrganic = function (){  //if this function is not declared in Fruit then the Plant amIOrganic function will be called
+       if(this.isOrganic){
     console.log("I am not organic");
+       console.log(this.isOrganic);  //true
+       }
   };
 }
 
