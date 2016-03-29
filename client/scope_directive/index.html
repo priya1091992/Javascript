@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+  <script src="../bower_components/angular/angular.min.js"></script>
+  <script src="../bower_components/angular/angular.js"></script>
+  <script src="directiveScope.js"></script>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div ng-controller="controller1">
+ <div>True scope::<input type="text" ng-model="value1">
+  <div directive-true></div>
+</div>
+</div>
+
+<div ng-controller="controller2">
+  <div>False scope::<input type="text" ng-model="value2">
+  <div directive-false></div>
+</div>
+</div>
+
+<div ng-controller="controller3">
+  <div>Isolated scope::<input type="text" ng-model="value3">
+  <div directive-isolated></div>
+</div>
+  </div>
+
+<div ng-controller="controller4">
+  Name:<input type="text" ng-model="name">
+  Color:<input type="text" ng-model="color">
+
+  <div directive-example name="{{name}}" color="color" change="changeValue()"></div>
+
+</div>
+<d-t>
+  <div>and</div>
+  <div class="def">This does appear only when transclude is true</div>
+</d-t>
+
+
+
+</body>
+</html>
